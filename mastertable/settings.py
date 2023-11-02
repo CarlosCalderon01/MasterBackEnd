@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # se agregan los modulos apps a proyecto general.
 # ejemplo globalmastertable
 INSTALLED_APPS = [
+    'rest_framework',
     'globalmastertable',
     'django.contrib.admin',
     'django.contrib.auth',

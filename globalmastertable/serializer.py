@@ -6,9 +6,31 @@ class GmtCountrySerializers(serializers.ModelSerializer):
     class Meta:
         model = GmtCountry
         fields = '__all__'
-        # fields = ('name','alfa2') #--> para modificar unos cuantos, no todo en la tabla. 
+        # fields = ['id', 'title', 'code', 'linenos', 'language', 'style']
+        # fields --> modificar 1 por 1
+
+
+class GmtStateSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = GmtState
+        Country = serializers.PrimaryKeyRelatedField(
+            queryset=GmtCountry.objects.all())
+        fields = '__all__'
+
 
 class GmtLanguageSerializers(serializers.ModelSerializer):
     class Meta:
         model = GmtLanguage
         fields = '__all__'
+
+
+# // ----- // ----- // ----- // ----- //
+# puedes relacionar tablas en un serializer
+    # utilizando los serializers relacionados.
+
+        # PrimaryKeyRelatedField
+        # StringRelatedField
+        # SlugRelatedField
+        # HyperlinkedRelatedField
+        # HyperlinkedIdentityField
+# // ----- // ----- // ----- // ----- //

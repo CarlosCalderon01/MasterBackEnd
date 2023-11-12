@@ -25,6 +25,15 @@ class GmtState(models.Model):
         managed = False
         db_table = 'gmtstate'
 
+
+class GmtCity(models.Model):
+    gmtstate = models.ForeignKey('Gmtstate', models.DO_NOTHING)
+    name = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'gmtcity'
+
 # // ----- // ----- // ----- // ----- // ----- //
 # Section 1 - Finish Section
 # // ----- // ----- // ----- // ----- // ----- //

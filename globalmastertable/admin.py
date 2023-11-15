@@ -10,3 +10,6 @@ admin.site.register(GmtState)
 admin.site.register(GmtCity)
 # Section 2 - Language, Language, Communication
 admin.site.register(GmtLanguage)
+# Section 3 - 
+admin.site.register(Textingtask1)
+

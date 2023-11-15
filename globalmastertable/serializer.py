@@ -58,6 +58,10 @@ class GmtLanguageSerializers(serializers.ModelSerializer):
         # read_only_fields = ['alfa2']
     
     # extra_kwargs --> only allows read, do not edit.
+    # extra_kwargs = {'password': {'write_only': True}}
+
+    # exclude --> you can exclude arguments use this.
+    # exclude = ['users']
 
 # Topics On Hold
 """
@@ -83,3 +87,19 @@ class GmtLanguageSerializers(serializers.ModelSerializer):
 
     # utilizando los serializers relacionados.
 
+
+
+# // ----- // ----- // ----- // ----- // ----- //
+# Section x - TestingTask1
+# // ----- // ----- // ----- // ----- // ----- //
+
+
+class GTextingtask1Serializers(serializers.ModelSerializer):
+    class Meta:
+        model = Textingtask1
+        fields = ['serialid1', 'text1', 'character1', 'char1', 'money1', 'date1', 'timestamp1']
+        # serialid1, text1, character1, char1, money1, date1, timestamp1
+
+# // ----- // ----- // ----- // ----- // ----- //
+# Section X - TestingTask1
+# // ----- // ----- // ----- // ----- // ----- //
